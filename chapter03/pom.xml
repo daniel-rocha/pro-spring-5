@@ -5,10 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.danielrocks.notes</groupId>
-    <artifactId>pro-spring-5-chapter02</artifactId>
+    <artifactId>pro-spring-5-chapter03</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
-    <name>chapter-02</name>
+    <name>pro-spring-5</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
@@ -17,6 +18,10 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+
+    <modules>
+        <module>setter-injection</module>
+    </modules>
 
     <dependencies>
         <dependency>
@@ -109,54 +114,7 @@
                     <artifactId>maven-project-info-reports-plugin</artifactId>
                     <version>3.0.0</version>
                 </plugin>
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>exec-maven-plugin</artifactId>
-                    <version>1.6.0</version>
-                    <executions>
-                        <execution>
-                            <id>default-cli</id>
-                            <configuration>
-                                <mainClass>com.apress.prospring5.ch2.HelloWorld</mainClass>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>1</id>
-                            <configuration>
-                                <mainClass>com.apress.prospring5.ch2.HelloWorldWithCommandLine</mainClass>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>2</id>
-                            <configuration>
-                                <mainClass>com.apress.prospring5.ch2.HelloWorldSpringDI</mainClass>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>3</id>
-                            <configuration>
-                                <mainClass>com.apress.prospring5.ch2.annotated.HelloWorldSpringAnnotated</mainClass>
-                            </configuration>
-                        </execution>
-                        <execution>
-                            <id>4</id>
-                            <configuration>
-                                <mainClass>com.apress.prospring5.ch2.decoupled.HelloWorldDecoupled</mainClass>
-                            </configuration>
-                        </execution>
-                    </executions>
-                </plugin>
             </plugins>
         </pluginManagement>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>8</source>
-                    <target>8</target>
-                </configuration>
-            </plugin>
-        </plugins>
     </build>
 </project>
