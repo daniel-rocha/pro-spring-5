@@ -12,16 +12,24 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class HelloWorldConfiguration {
-
-	@Bean
-	public MessageProvider provider() {
-		return new HelloWorldMessageProvider();
-	}
-
-	@Bean
-	public MessageRenderer renderer(){
-		MessageRenderer renderer = new StandardOutMessageRenderer();
-		renderer.setMessageProvider(provider());
-		return renderer;
-	}
+  
+  @Bean
+  public MessageProvider provider() {
+    System.out.println("That one called");
+    return new HelloWorldMessageProvider();
+  }
+  
+  @Bean
+  public MessageProvider provider2() {
+    System.out.println("This one called");
+    return new HelloWorldMessageProvider();
+  }
+  
+  @Bean
+  public MessageRenderer renderer() {
+    MessageRenderer renderer = new StandardOutMessageRenderer();
+    System.out.println("The providers will be set");
+    renderer.setMessageProvider(provider());
+    return renderer;
+  }
 }
