@@ -40,6 +40,24 @@
                                 <mainClass>com.apress.prospring5.ch3.XmlConfigWithBeanFactory</mainClass>
                             </configuration>
                         </execution>
+                        <execution>
+                            <id>2</id>
+                            <configuration>
+                                <mainClass>com.apress.prospring5.ch3.DeclareSpringComponents</mainClass>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>3</id>
+                            <configuration>
+                                <mainClass>com.apress.prospring5.ch3.annotated.HelloWorldSpringAnnotated</mainClass>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>4</id>
+                            <configuration>
+                                <mainClass>com.apress.prospring5.ch3.mixed.HelloWorldSpringMixed</mainClass>
+                            </configuration>
+                        </execution>
                     </executions>
                 </plugin>
             </plugins>

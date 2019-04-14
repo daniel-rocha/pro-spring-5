@@ -12,6 +12,9 @@ public class XmlConfigWithBeanFactory {
 		rdr.loadBeanDefinitions(new
 				ClassPathResource("spring/xml-bean-factory-config.xml"));
 		Oracle oracle = (Oracle) factory.getBean("oracle");
+		Oracle oracleByName = (Oracle)factory.getBean("wiseworm");
 		System.out.println(oracle.defineMeaningOfLife());
+		System.out.println(oracleByName.defineMeaningOfLife());
+		System.out.println(oracle == oracleByName);
 	}
 }

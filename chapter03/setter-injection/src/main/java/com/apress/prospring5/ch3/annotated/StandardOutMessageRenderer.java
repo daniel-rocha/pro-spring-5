@@ -23,6 +23,7 @@ public class StandardOutMessageRenderer implements MessageRenderer {
     @Override
     @Autowired
     public void setMessageProvider(MessageProvider provider) {
+        System.out.println("Calling autowired setter");
         this.messageProvider = provider;
     }
 
