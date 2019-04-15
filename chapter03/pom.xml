@@ -23,6 +23,7 @@
         <module>setter-injection</module>
         <module>constructor-injection</module>
         <module>field-injection</module>
+        <module>simple-types</module>
     </modules>
 
     <dependencies>

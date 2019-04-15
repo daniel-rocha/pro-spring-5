@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 @Service("injectSimple")
 public class InjectSimple {
 
-	@Value("John Mayer")
+	@Value("John Mayerson")
 	private String name;
 	@Value("40")
 	private int age;
