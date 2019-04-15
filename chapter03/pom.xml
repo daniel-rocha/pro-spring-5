@@ -24,6 +24,7 @@
         <module>constructor-injection</module>
         <module>field-injection</module>
         <module>simple-types</module>
+        <module>injection</module>
     </modules>
 
     <dependencies>

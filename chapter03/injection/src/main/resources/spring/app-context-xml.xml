@@ -9,7 +9,9 @@
 
     <bean id="injectRef" class="com.apress.prospring5.ch3.xml.InjectRef">
         <property name="oracle">
-            <ref bean="wiseworm"/>
+            <!-- both work here-->
+            <!--<ref bean="wiseworm"/>-->
+            <ref bean="oracle"/>
         </property>
     </bean>
 </beans>
