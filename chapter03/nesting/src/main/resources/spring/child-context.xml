@@ -15,6 +15,7 @@
 
     <bean id="song3" class="com.apress.prospring5.ch3.Song">
         <property name="title">
+            <!-- this is very important because will seek out the childTitle in hte PARENT context -->
             <ref parent="childTitle"/>
         </property> 
     </bean>

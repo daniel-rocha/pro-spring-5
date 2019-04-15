@@ -25,6 +25,7 @@
         <module>field-injection</module>
         <module>simple-types</module>
         <module>injection</module>
+        <module>nesting</module>
     </modules>
 
     <dependencies>
