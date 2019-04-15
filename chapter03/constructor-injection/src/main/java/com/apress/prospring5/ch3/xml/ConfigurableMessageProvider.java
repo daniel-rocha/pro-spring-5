@@ -10,6 +10,7 @@ public class ConfigurableMessageProvider implements MessageProvider {
 	}
 
 	public ConfigurableMessageProvider(String message) {
+		System.out.println("Message injected via constructor injection in XML: " + message);
 		this.message = message;
 	}
 

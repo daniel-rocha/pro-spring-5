@@ -8,7 +8,7 @@
 
     <bean id="provider"
         class="com.apress.prospring5.ch3.xml.ConfigurableMessageProvider"
-        c:message="I hope that someone gets my message in a bottle"/>
+        c:message="I hope that someone gets my message in a bottle 2ss"/>
 
     <bean id="constructorConfusion"
         class="com.apress.prospring5.ch3.xml.ConstructorConfusion">

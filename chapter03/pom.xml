@@ -21,6 +21,7 @@
 
     <modules>
         <module>setter-injection</module>
+        <module>constructor-injection</module>
     </modules>
 
     <dependencies>
