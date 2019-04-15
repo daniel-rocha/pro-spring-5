@@ -12,6 +12,7 @@ public class Inspiration {
 	private String lyric = "I can keep the door cracked open, to let light through";
 
 	public Inspiration(@Value("For all my running, I can understand") String lyric) {
+		System.out.println("Injecting value " + lyric);
 		this.lyric = lyric;
 	}
 
