@@ -11,7 +11,9 @@
         <property name="map">
             <map>
                 <entry key="someValue" value="It's a Friday, we finally made it"/>
+                <!-- this injects the bean above into this map. nice -->
                 <entry key="someBean" value-ref="lyricHolder"/>
+                <entry key="soyBean" value="Hello world"/>
             </map>
         </property>
         <property name="props">
@@ -30,6 +32,10 @@
             <list>
                 <value>You've been working and I've been waiting</value>
                 <ref bean="lyricHolder"/>
+                <props>
+                    <prop key="firstName">John</prop>
+                    <prop key="secondName">Mayer</prop>
+                </props>
             </list>
         </property>
     </bean>

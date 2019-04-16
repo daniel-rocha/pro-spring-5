@@ -26,6 +26,7 @@
         <module>simple-types</module>
         <module>injection</module>
         <module>nesting</module>
+        <module>collections</module>
     </modules>
 
     <dependencies>
