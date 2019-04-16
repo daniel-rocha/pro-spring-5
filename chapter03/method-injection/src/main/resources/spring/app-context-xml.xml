@@ -5,6 +5,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <!-- note that this been has been scoped prototype but since it's
+         held by the single as an instance field, it will be injected only once -->
     <bean id="singer" class="com.apress.prospring5.ch3.Singer" scope="prototype"/>
 
     <bean id="abstractLookupBean" class="com.apress.prospring5.ch3.AbstractLookupDemoBean">

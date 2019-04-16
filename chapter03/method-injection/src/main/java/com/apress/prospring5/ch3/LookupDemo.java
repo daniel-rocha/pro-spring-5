@@ -15,6 +15,8 @@ public class LookupDemo {
 
 		displayInfo("abstractLookupBean", abstractBean);
 		displayInfo("standardLookupBean", standardBean);
+		
+		System.out.println(abstractBean.getClass().getCanonicalName());
 
 		ctx.close();
 	}

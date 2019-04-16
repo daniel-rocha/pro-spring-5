@@ -10,7 +10,7 @@ public class StandardLookupDemoBean implements DemoBean {
 	private Singer mySinger;
 
 	@Autowired
-	@Qualifier("singer")
+	//@Qualifier("singer")
 	public void setMySinger(Singer mySinger) {
 		this.mySinger = mySinger;
 	}

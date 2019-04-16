@@ -27,6 +27,7 @@
         <module>injection</module>
         <module>nesting</module>
         <module>collections</module>
+        <module>method-injection</module>
     </modules>
 
     <dependencies>
