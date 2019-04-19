@@ -28,6 +28,7 @@
         <module>nesting</module>
         <module>collections</module>
         <module>method-injection</module>
+        <module>method-replacement</module>
     </modules>
 
     <dependencies>
