@@ -16,12 +16,14 @@ public class Singer implements ApplicationContextAware{
 	ApplicationContext applicationContext;
 
 	@Override public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+		System.out.println("Received application context " + applicationContext);
 		this.applicationContext = applicationContext;
 	}
 
 	private Guitar guitar;
 
 	public Singer(){
+		System.out.println("Was constructed");
 	}
 
 	public void sing() {

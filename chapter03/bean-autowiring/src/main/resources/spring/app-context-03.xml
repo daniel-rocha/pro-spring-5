@@ -7,7 +7,12 @@
 
     <bean id="fooOne" class="com.apress.prospring5.ch3.xml.Foo"/>
     <bean id="barOne" class="com.apress.prospring5.ch3.xml.Bar"/>
-    
+
+    <!-- uncommenting this causes a NoUniqueBeanDefinition
+    <bean id="barTwo" class="com.apress.prospring5.ch3.xml.Bar"/>
+    -->
+
+    <!-- autowired by name so only fooOne is set since there's no barOne property -->
     <bean id="targetByName" autowire="byName" class="com.apress.prospring5.ch3.xml.Target"
         lazy-init="true"/>
 

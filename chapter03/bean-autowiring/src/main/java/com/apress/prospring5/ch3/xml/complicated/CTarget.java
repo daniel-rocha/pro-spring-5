@@ -44,7 +44,7 @@ public class CTarget {
 		//ctx.load("classpath:spring/app-context-04.xml");
 
 		//using qualifier
-		ctx.load("classpath:spring/app-context-05.xml");
+		ctx.load("classpath:spring/app-context-04.xml");
 		ctx.refresh();
 		System.out.println("\nUsing byType:\n");
 		CTarget t = (CTarget) ctx.getBean("targetByType");

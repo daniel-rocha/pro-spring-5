@@ -2,6 +2,7 @@ package com.apress.prospring5.ch3.sandbox;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.context.support.GenericXmlApplicationContext;
 import org.springframework.stereotype.Component;
@@ -25,8 +26,14 @@ public class TrickyTarget {
 		System.out.println("Target(Foo) called");
 	}
 
+	//@Autowired here isn'' gonna work because there are two types of Foo beans
 	public TrickyTarget(Foo fooOne, Bar bar) {
 		System.out.println("Target(Foo, Bar) called");
+	}
+	
+	@Autowired
+	public TrickyTarget(@Qualifier("fooImplOne") Foo fooOne, @Qualifier("fooImplTwo") Foo fooTwo, Bar bar) {
+		System.out.println("Target(Foo, Foo, Bar) called");
 	}
 
 	// comment @Qualifier annotation to cause NoUniqueBeanDefinitionException being thrown at runtime
