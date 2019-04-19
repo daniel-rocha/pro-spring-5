@@ -29,6 +29,7 @@
         <module>collections</module>
         <module>method-injection</module>
         <module>method-replacement</module>
+        <module>dependency-pull</module>
     </modules>
 
     <dependencies>
