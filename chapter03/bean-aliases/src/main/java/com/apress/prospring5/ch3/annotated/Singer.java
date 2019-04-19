@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  * Observation: @Component("singer") is equivalent to @Component in this case
  * Decomment and comment annotations below and test the result.
  */
-@Component("johnMayer")
+@Component("johnMayerelli")
 //samples of @Awars annotation possible syntax
 //@Award("grammy")
 //@Award(prize = {"grammy", "platinum disk"})
