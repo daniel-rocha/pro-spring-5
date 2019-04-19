@@ -15,6 +15,7 @@ public class NonSingletonDemo {
         
           System.out.println("Identity Equal?: " + (singer1 ==singer2));
           System.out.println("Value Equal:? " + singer1.equals(singer2));
+          System.out.println("Attributes equal? " + singer1.toString().equals(singer2.toString()));
           System.out.println(singer1);
           System.out.println(singer2);
 

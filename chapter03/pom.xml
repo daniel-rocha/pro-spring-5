@@ -32,6 +32,7 @@
         <module>dependency-pull</module>
         <module>cdl</module>
         <module>bean-aliases</module>
+        <module>bean-instantiation-mode</module>
     </modules>
 
     <dependencies>
