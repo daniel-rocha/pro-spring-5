@@ -30,6 +30,7 @@
         <module>method-injection</module>
         <module>method-replacement</module>
         <module>dependency-pull</module>
+        <module>cdl</module>
     </modules>
 
     <dependencies>
