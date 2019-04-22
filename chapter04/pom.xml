@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.danielrocks.notes</groupId>
-    <artifactId>pro-spring-5-chapter03</artifactId>
+    <artifactId>pro-spring-5-chapter04</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
@@ -20,21 +20,18 @@
     </properties>
 
     <modules>
-        <module>setter-injection</module>
-        <module>constructor-injection</module>
-        <module>field-injection</module>
-        <module>simple-types</module>
-        <module>injection</module>
-        <module>nesting</module>
-        <module>collections</module>
-        <module>method-injection</module>
-        <module>method-replacement</module>
-        <module>dependency-pull</module>
-        <module>cdl</module>
-        <module>bean-aliases</module>
-        <module>bean-instantiation-mode</module>
-        <module>bean-autowiring</module>
-        <module>bean-inheritance</module>
+        <module>bean-init-method</module>
+        <module>initializing-bean</module>
+        <module>initializing-bean-destroy</module>
+        <module>post-construct</module>
+        <module>disposable-bean</module>
+        <module>post-construct-pre-destroy</module>
+        <module>shutdown-hook</module>
+        <module>bean-name-aware</module>
+        <module>application-context-aware</module>
+        <module>factory-bean</module>
+        <module>factory-bean-and-factory-method-attributes</module>
+        <module>property-editors</module>
     </modules>
 
     <dependencies>

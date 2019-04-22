@@ -12,9 +12,9 @@ import org.springframework.context.annotation.Profile;
 @Configuration
 @Profile("highschool")
 public class HighschoolConfig {
-
-	@Bean
-	public FoodProviderService foodProviderService(){
-		return new FoodProviderServiceImpl();
-	}
+  
+  @Bean
+  public FoodProviderService foodProviderService() {
+    return new FoodProviderServiceImpl();
+  }
 }

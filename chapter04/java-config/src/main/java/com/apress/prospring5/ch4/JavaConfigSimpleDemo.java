@@ -10,31 +10,31 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 public class JavaConfigSimpleDemo {
-
-    @Configuration
-    static class AppConfig {
-        @Bean
-        public MessageProvider messageProvider() {
-            return new ConfigurableMessageProvider();
-        }
-
-        @Bean
-        public MessageRenderer messageRenderer() {
-            MessageRenderer renderer = new StandardOutMessageRenderer();
-            renderer.setMessageProvider(messageProvider());
-
-            return renderer;
-        }
+  
+  @Configuration
+  static class AppConfig {
+    @Bean
+    public MessageProvider messageProvider() {
+      return new ConfigurableMessageProvider();
     }
-
-
-    public static void main(String... args) {
-        ApplicationContext ctx = new 
-            AnnotationConfigApplicationContext(AppConfig.class);
-
-        MessageRenderer renderer =
-            ctx.getBean("messageRenderer", MessageRenderer.class);
-
-        renderer.render();
+    
+    @Bean
+    public MessageRenderer messageRenderer() {
+      MessageRenderer renderer = new StandardOutMessageRenderer();
+      renderer.setMessageProvider(messageProvider());
+      
+      return renderer;
     }
+  }
+  
+  
+  public static void main(String... args) {
+    ApplicationContext ctx = new
+        AnnotationConfigApplicationContext(AppConfig.class);
+    
+    MessageRenderer renderer =
+        ctx.getBean("messageRenderer", MessageRenderer.class);
+    
+    renderer.render();
+  }
 }

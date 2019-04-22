@@ -5,22 +5,22 @@ import javax.inject.Named;
 
 @Named("messageProvider")
 public class ConfigurableMessageProvider implements MessageProvider {
-    private String message = "Default message";
+  private String message = "Default message";
 
-    public ConfigurableMessageProvider() {
-    }
+  public ConfigurableMessageProvider() {
+  }
 
-    @Inject
-    @Named("message")
-    public ConfigurableMessageProvider(String message) {
-        this.message = message;
-    }
+  @Inject
+  @Named("message")
+  public ConfigurableMessageProvider(String message) {
+    this.message = message;
+  }
 
-    public void setMessage(String message) {
-        this.message = message;
-    }
+  public void setMessage(String message) {
+    this.message = message;
+  }
 
-    public String getMessage() {
-        return message;
-    }
+  public String getMessage() {
+    return message;
+  }
 }
