@@ -32,6 +32,17 @@
         <module>factory-bean</module>
         <module>factory-bean-and-factory-method-attributes</module>
         <module>property-editors</module>
+        <module>message-source</module>
+        <module>events</module>
+        <module>resource</module>
+        <module>java-config</module>
+        <module>java-config-message-provider</module>
+        <module>profiles</module>
+        <module>environment</module>
+        <module>property-placeholder</module>
+        <module>jsr330</module>
+        <module>boot-simple</module>
+        <module>boot-web</module>
     </modules>
 
     <dependencies>

@@ -7,7 +7,7 @@ import com.apress.prospring5.ch2.decoupled.MessageProvider;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-@Service("provider")
+@Service("provider2")
 public class ConfigurableMessageProvider implements MessageProvider {
   
   private String message;

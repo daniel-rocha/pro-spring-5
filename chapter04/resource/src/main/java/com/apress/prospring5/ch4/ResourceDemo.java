@@ -3,8 +3,11 @@ package com.apress.prospring5.ch4;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.Resource;
+import org.springframework.core.io.UrlResource;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.InputStreamReader;
 
 public class ResourceDemo {
   public static void main(String... args) throws Exception {
@@ -19,7 +22,16 @@ public class ResourceDemo {
     Resource res2 = ctx.getResource("classpath:test.txt");
     displayInfo(res2);
     
-    Resource res3 = ctx.getResource("http://www.google.com");
+    UrlResource res3 = (UrlResource) ctx.getResource("http://www.google.com");
+    String line = null;
+    
+    try (
+        BufferedReader br = new BufferedReader(new InputStreamReader(res3.getInputStream()));
+        ) {
+        while((line = br.readLine()) != null) {
+          System.out.println(line);
+        }
+    }
     displayInfo(res3);
   }
   
@@ -27,6 +39,6 @@ public class ResourceDemo {
     System.out.println(res.getClass());
     System.out.println(res.getURL()
         .getContent());
-    System.out.println("");
+    System.out.println(res.contentLength());
   }
 }

@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.danielrocks.notes</groupId>
-    <artifactId>java-config</artifactId>
+    <artifactId>java-config-message-provider</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>java-config</name>
+    <name>java-config-message-provider</name>
 
     <parent>
         <groupId>com.danielrocks.notes</groupId>
@@ -42,13 +42,19 @@
                         <execution>
                             <id>default-cli</id>
                             <configuration>
-                                <mainClass>com.apress.prospring5.ch4.JavaConfigSimpleDemo</mainClass>
+                                <mainClass>com.apress.prospring5.ch4.JavaConfigExampleOne</mainClass>
                             </configuration>
                         </execution>
                         <execution>
                             <id>2</id>
                             <configuration>
-                                <mainClass>com.apress.prospring5.ch4.JavaConfigXMLDemo</mainClass>
+                                <mainClass>com.apress.prospring5.ch4.JavaConfigExampleTwo</mainClass>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>3</id>
+                            <configuration>
+                                <mainClass>com.apress.prospring5.ch4.JavaConfigExampleThree</mainClass>
                             </configuration>
                         </execution>
                     </executions>

@@ -23,6 +23,7 @@ public class ProfilesJavaConfigTest {
   
   @Test
   public void testProvider() {
+    System.out.println(foodProviderService.provideLunchSet() + "");
     assertTrue(foodProviderService.provideLunchSet() != null);
     assertFalse(foodProviderService.provideLunchSet()
         .isEmpty());

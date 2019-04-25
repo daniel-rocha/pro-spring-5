@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.danielrocks.notes</groupId>
-    <artifactId>java-config</artifactId>
+    <artifactId>environment</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>java-config</name>
+    <name>environment</name>
 
     <parent>
         <groupId>com.danielrocks.notes</groupId>
@@ -29,6 +29,22 @@
             <artifactId>constructor-injection</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>5.1.6.RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
+
     </dependencies>
 
     <build>
@@ -42,13 +58,13 @@
                         <execution>
                             <id>default-cli</id>
                             <configuration>
-                                <mainClass>com.apress.prospring5.ch4.JavaConfigSimpleDemo</mainClass>
+                                <mainClass>com.apress.prospring5.ch4.EnvironmentSampleFirst</mainClass>
                             </configuration>
                         </execution>
                         <execution>
                             <id>2</id>
                             <configuration>
-                                <mainClass>com.apress.prospring5.ch4.JavaConfigXMLDemo</mainClass>
+                                <mainClass>com.apress.prospring5.ch4.EnvironmentSampleLast</mainClass>
                             </configuration>
                         </execution>
                     </executions>

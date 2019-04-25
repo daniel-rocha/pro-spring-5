@@ -18,6 +18,8 @@ public class EnvironmentSampleFirst {
     MutablePropertySources propertySources = env.getPropertySources();
     
     Map<String, Object> appMap = new HashMap<>();
+    
+    // here i am modifying the user.home environment variable.
     appMap.put("user.home", "application_home");
     
     propertySources.addFirst(new MapPropertySource("prospring5_MAP", appMap));
