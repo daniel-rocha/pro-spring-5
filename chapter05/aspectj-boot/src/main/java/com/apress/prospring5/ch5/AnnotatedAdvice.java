@@ -11,37 +11,44 @@ import org.springframework.stereotype.Component;
 @Component
 @Aspect
 public class AnnotatedAdvice {
-    @Pointcut("execution(* com.apress.prospring5.ch5..sing*(com.apress.prospring5.ch5.Guitar)) && args(value)")
-    public void singExecution(Guitar value) {
+  @Pointcut("execution(* com.apress.prospring5.ch5..sing*(com.apress.prospring5.ch5.Guitar)) && args(value)")
+  public void singExecution(Guitar value) {
+  }
+
+  @Pointcut("bean(john*)")
+  public void isJohn() {
+  }
+
+  @Before("singExecution(value) && isJohn()")
+  public void simpleBeforeAdvice(JoinPoint joinPoint, Guitar value) {
+    if (value.getBrand()
+        .equals("Gibson")) {
+      System.out.println("Executing: " +
+          joinPoint.getSignature()
+              .getDeclaringTypeName() + " "
+          + joinPoint.getSignature()
+          .getName() + " argument: " + value.getBrand());
     }
+  }
 
-    @Pointcut("bean(john*)")
-    public void isJohn() {
-    }
+  @Around("singExecution(value) && isJohn()")
+  public Object simpleAroundAdvice(ProceedingJoinPoint pjp, Guitar value) throws Throwable {
+    System.out.println("Before execution: " +
+        pjp.getSignature()
+            .getDeclaringTypeName() + " "
+        + pjp.getSignature()
+        .getName()
+        + " argument: " + value.getBrand());
 
-    @Before("singExecution(value) && isJohn()")
-    public void simpleBeforeAdvice(JoinPoint joinPoint, Guitar value) {
-        if(value.getBrand().equals("Gibson")) {
-        System.out.println("Executing: " + 
-            joinPoint.getSignature().getDeclaringTypeName() + " "
-            + joinPoint.getSignature().getName() + " argument: " + value.getBrand());
-        }
-    }
+    Object retVal = pjp.proceed();
 
-    @Around("singExecution(value) && isJohn()")
-    public Object simpleAroundAdvice(ProceedingJoinPoint pjp, Guitar value) throws Throwable {
-        System.out.println("Before execution: " +      
-            pjp.getSignature().getDeclaringTypeName() + " "
-            + pjp.getSignature().getName()
-            + " argument: " + value.getBrand());
+    System.out.println("After execution: " +
+        pjp.getSignature()
+            .getDeclaringTypeName() + " "
+        + pjp.getSignature()
+        .getName()
+        + " argument: " + value.getBrand());
 
-        Object retVal = pjp.proceed();
-
-        System.out.println("After execution: " +   
-            pjp.getSignature().getDeclaringTypeName() + " "
-            + pjp.getSignature().getName()
-            + " argument: " + value.getBrand());
-
-        return retVal;
-    }
+    return retVal;
+  }
 }

@@ -6,20 +6,20 @@ import org.springframework.aop.support.DefaultPointcutAdvisor;
 import org.springframework.aop.support.JdkRegexpMethodPointcut;
 
 public class RegexpPointcutDemo {
-    public static void main(String... args) {
-        Guitarist johnMayer = new Guitarist();
+  public static void main(String... args) {
+    Guitarist johnMayer = new Guitarist();
 
-        JdkRegexpMethodPointcut pc = new JdkRegexpMethodPointcut();
-        pc.setPattern(".*sing.*");
-        Advisor advisor = new DefaultPointcutAdvisor(pc, new SimpleAdvice());
+    JdkRegexpMethodPointcut pc = new JdkRegexpMethodPointcut();
+    pc.setPattern(".*sing.*");
+    Advisor advisor = new DefaultPointcutAdvisor(pc, new SimpleAdvice());
 
-        ProxyFactory pf = new ProxyFactory();
-        pf.setTarget(johnMayer);
-        pf.addAdvisor(advisor);
-        Guitarist proxy = (Guitarist) pf.getProxy();
+    ProxyFactory pf = new ProxyFactory();
+    pf.setTarget(johnMayer);
+    pf.addAdvisor(advisor);
+    Guitarist proxy = (Guitarist) pf.getProxy();
 
-        proxy.sing();
-        proxy.sing2();
-        proxy.rest();
-    }
+    proxy.sing();
+    proxy.sing2();
+    proxy.rest();
+  }
 }

@@ -9,7 +9,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  */
 @Configuration
 @ComponentScan(basePackages = {"com.apress.prospring5.ch5"})
-@EnableAspectJAutoProxy(proxyTargetClass = true)
+@EnableAspectJAutoProxy(proxyTargetClass = true) // this leads to usage of CGLIB instead of JDK proxies.
 public class AppConfig {
 
 }
