@@ -4,6 +4,7 @@ import com.apress.prospring5.ch2.decoupled.MessageProvider;
 import com.apress.prospring5.ch2.decoupled.MessageRenderer;
 import com.apress.prospring5.ch2.decoupled.StandardOutMessageRenderer;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -13,6 +14,7 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfigTwo {
   
   @Autowired
+  @Qualifier("provider2")
   MessageProvider provider;
   
   
