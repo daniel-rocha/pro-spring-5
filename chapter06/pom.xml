@@ -21,6 +21,7 @@
 
     <modules>
         <module>plain-jdbc</module>
+        <module>spring-jdbc-annotations</module>
     </modules>
 
     <dependencies>

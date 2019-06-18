@@ -12,7 +12,7 @@ import java.util.List;
 public class PlainSingerDao implements SingerDao {
 
 	private static Logger logger = LoggerFactory.getLogger(PlainSingerDao.class);
-
+	
 	static {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
