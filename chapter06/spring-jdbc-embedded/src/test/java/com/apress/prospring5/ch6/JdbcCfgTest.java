@@ -24,15 +24,15 @@ public class JdbcCfgTest {
 		testDao(ctx.getBean(SingerDao.class));
 		ctx.close();
 	}
-
-	@Test
+	
+	/*@Test
 	public void testDerby() {
 		GenericXmlApplicationContext ctx = new GenericXmlApplicationContext();
 		ctx.load("classpath:spring/embedded-derby-cfg.xml");
 		ctx.refresh();
 		testDao(ctx.getBean(SingerDao.class));
 		ctx.close();
-	}
+	}*/
 
 	@Test
 	public void testEmbeddedJavaConfig() {

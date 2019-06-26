@@ -22,6 +22,7 @@
     <modules>
         <module>plain-jdbc</module>
         <module>spring-jdbc-annotations</module>
+        <module>spring-jdbc-embedded</module>
     </modules>
 
     <dependencies>
