@@ -26,6 +26,7 @@
         <module>spring-jdbc-namedparam</module>
         <module>spring-jdbc-rowmapper</module>
         <module>spring-jdbc-resultsetextractor</module>
+        <module>spring-boot-jdbc</module>
     </modules>
 
     <dependencies>
