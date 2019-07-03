@@ -23,6 +23,9 @@
         <module>plain-jdbc</module>
         <module>spring-jdbc-annotations</module>
         <module>spring-jdbc-embedded</module>
+        <module>spring-jdbc-namedparam</module>
+        <module>spring-jdbc-rowmapper</module>
+        <module>spring-jdbc-resultsetextractor</module>
     </modules>
 
     <dependencies>
