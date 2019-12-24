@@ -12,11 +12,13 @@ public class DateTimeEditorRegistrar implements PropertyEditorRegistrar {
     private DateTimeFormatter dateTimeFormatter;
 
     public DateTimeEditorRegistrar(String dateFormatPattern) {
+        System.err.println("Registering data pattern " + dateFormatPattern);
         dateTimeFormatter = DateTimeFormat.forPattern(dateFormatPattern);
     }
 
     @Override
     public void registerCustomEditors(PropertyEditorRegistry registry) {
+        System.err.println("registerCustomEditors " + registry.toString());
         registry.registerCustomEditor(DateTime.class, new DateTimeEditor(dateTimeFormatter));
     }
 
@@ -29,6 +31,7 @@ public class DateTimeEditorRegistrar implements PropertyEditorRegistrar {
 
         @Override
         public void setAsText(String text) throws IllegalArgumentException {
+            System.err.println("setAsText");
             setValue(DateTime.parse(text, dateTimeFormatter));
         }
     }

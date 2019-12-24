@@ -3,8 +3,6 @@ package com.apress.prospring5.ch11.services;
 import com.apress.prospring5.ch11.entities.Car;
 import com.apress.prospring5.ch11.repos.CarRepository;
 import com.google.common.collect.Lists;
-import org.joda.time.DateTime;
-import org.joda.time.Years;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,12 +37,11 @@ public class CarServiceImpl implements CarService {
     @Override
     public void updateCarAgeJob() {
         List<Car> cars = findAll();
-
-        DateTime currentDate = DateTime.now();
+        
         logger.info("Car age update job started");
 
         cars.forEach(car -> {
-            int age = Years.yearsBetween(car.getManufactureDate(), currentDate).getYears();
+            int age = 2;
 
             car.setAge(age);
             save(car);

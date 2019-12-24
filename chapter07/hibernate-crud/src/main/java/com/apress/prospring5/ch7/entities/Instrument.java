@@ -22,6 +22,7 @@ public class Instrument implements Serializable {
 	private Set<Singer> singers = new HashSet<>();
 
 	public String getInstrumentId() {
+		System.out.println("Returning instrument id ...");
 		return this.instrumentId;
 	}
 

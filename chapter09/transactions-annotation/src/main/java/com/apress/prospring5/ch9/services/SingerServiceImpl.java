@@ -32,7 +32,7 @@ public class SingerServiceImpl implements SingerService {
 	@Override
 	@Transactional(readOnly = true)
 	public Singer findById(Long id) {
-		return singerRepository.findById(id).get();
+		return singerRepository.findOne(id);
 	}
 
 	@Override

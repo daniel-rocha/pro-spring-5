@@ -9,10 +9,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Version;
 
-import org.hibernate.annotations.Type;
-import org.joda.time.DateTime;
-
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 @Entity
 @Table(name="car")
@@ -29,8 +28,8 @@ public class Car {
     private String manufacturer;
 
     @Column(name="MANUFACTURE_DATE")
-    @Type(type="org.jadira.usertype.dateandtime.joda.PersistentDateTime")
-    private DateTime manufactureDate;
+    private LocalDate manufactureDate;
+    
     @Column(name="AGE")
     private int age;
 
@@ -52,7 +51,7 @@ public class Car {
     }
 
 
-    public DateTime getManufactureDate() {
+    public LocalDate getManufactureDate() {
         return manufactureDate;
     }
 
@@ -78,7 +77,7 @@ public class Car {
         this.manufacturer = manufacturer;
     }
 
-    public void setManufactureDate(DateTime manufactureDate) {
+    public void setManufactureDate(LocalDate manufactureDate) {
         this.manufactureDate = manufactureDate;
     }
 
@@ -92,8 +91,9 @@ public class Car {
 
     @Override
     public String toString() {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String format = formatter.format(this.manufactureDate);
         return String.format("{License: %s, Manufacturer: %s, Manufacture Date: %s, Age: %d}",
-                licensePlate, manufacturer, sdf.format(manufactureDate.toDate()), age);
+                licensePlate, manufacturer, format, age);
     }
 }

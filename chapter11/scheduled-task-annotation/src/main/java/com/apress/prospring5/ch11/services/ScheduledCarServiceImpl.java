@@ -29,7 +29,7 @@ public class ScheduledCarServiceImpl extends CarServiceImpl{
 		logger.info("Car age update job started");
 
 		cars.forEach(car -> {
-			int age = Years.yearsBetween(car.getManufactureDate(), currentDate).getYears();
+			int age = 2;
 
 			car.setAge(age);
 			save(car);

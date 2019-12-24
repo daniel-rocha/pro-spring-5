@@ -27,7 +27,7 @@ public class SingerAuditServiceImpl implements SingerAuditService {
      * @return
      */
     public SingerAudit findById(Long id) {
-        return singerAuditRepository.findById(id).get();
+        return singerAuditRepository.findById(id);
     }
 
     public SingerAudit save(SingerAudit singer) {

@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.GenericApplicationContext;
 
+import java.util.Arrays;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
@@ -48,6 +49,13 @@ public class SingerJPATest {
 		List<Singer> singers = singerService.findAllWithAlbum();
 		assertEquals(3, singers.size());
 		listSingersWithAlbum(singers);
+	}
+	
+	@Test
+	public void testFindById2() {
+		Singer singer = singerService.findById(1L);
+		assertNotNull(singer);
+		listSingers(Arrays.asList(singer));
 	}
 
 	private static void listSingers(List<Singer> singers) {

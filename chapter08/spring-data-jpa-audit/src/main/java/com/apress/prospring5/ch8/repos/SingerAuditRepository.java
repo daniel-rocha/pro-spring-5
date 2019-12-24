@@ -4,4 +4,5 @@ import com.apress.prospring5.ch8.entities.SingerAudit;
 import org.springframework.data.repository.CrudRepository;
 
 public interface SingerAuditRepository extends CrudRepository<SingerAudit, Long> {
+  public SingerAudit findById(Long id);
 }

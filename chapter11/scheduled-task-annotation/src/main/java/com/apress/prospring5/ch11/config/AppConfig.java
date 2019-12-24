@@ -17,11 +17,9 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
 public class AppConfig {
 
 	// decomment this to use the TaskScheduler explicitly declared bean
-	/*
 	@Bean TaskScheduler carScheduler() {
 		ThreadPoolTaskScheduler carScheduler = new ThreadPoolTaskScheduler();
 		carScheduler.setPoolSize(10);
 		return carScheduler;
 	}
-	*/
 }

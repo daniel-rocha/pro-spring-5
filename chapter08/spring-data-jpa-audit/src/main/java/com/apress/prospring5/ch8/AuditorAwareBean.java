@@ -7,7 +7,13 @@ import java.util.Optional;
 
 @Component
 public class AuditorAwareBean implements AuditorAware<String> {
-    public Optional<String> getCurrentAuditor() {
-        return Optional.of("prospring5");
+    //public Optional<String> getCurrentAuditor() {
+    //    return Optional.of("prospring5");
+    //}
+    
+    
+    @Override
+    public String getCurrentAuditor() {
+        return "prospring5";
     }
 }

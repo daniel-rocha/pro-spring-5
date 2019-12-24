@@ -32,6 +32,7 @@ public class AppConfig {
 		return new PropertySourcesPlaceholderConfigurer();
 	}
 
+	// NOTE THIS IS WHERE THE CONVERSION TAKES PLACE, from Value(String) to the actual type in the class.
 	@Bean
 	public Singer john(@Value("${countrySinger.firstName}") String firstName,
 			@Value("${countrySinger.lastName}") String lastName,

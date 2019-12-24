@@ -13,7 +13,7 @@ import static javax.persistence.GenerationType.IDENTITY;
 @Entity
 @Table(name = "album")
 public class Album extends AbstractEntity {
-
+	
 	@Column
 	private String title;
 
@@ -29,8 +29,9 @@ public class Album extends AbstractEntity {
 	public Singer getSinger() {
 		return this.singer;
 	}
-
+	
 	public String getTitle() {
+		System.out.println("RETURNING GET TITLE");
 		return this.title;
 	}
 

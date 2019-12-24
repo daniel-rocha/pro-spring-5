@@ -18,6 +18,7 @@ public class AsyncServiceImpl implements AsyncService {
         logger.info("Start execution of async. task");
 
         try {
+            logger.info(Thread.currentThread().getName());
             Thread.sleep(10000);
         } catch (Exception ex) {
             logger.error("Task Interruption", ex);
@@ -30,6 +31,7 @@ public class AsyncServiceImpl implements AsyncService {
     @Override
     public Future<String> asyncWithReturn(String name) {
         logger.info("Start execution of async. task with return for "+ name);
+        logger.info(Thread.currentThread().getName());
 
         try {
             Thread.sleep(5000);

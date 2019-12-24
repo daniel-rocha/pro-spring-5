@@ -5,7 +5,7 @@ import com.apress.prospring5.ch10.CheckCountrySinger;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-@CheckCountrySinger
+@CheckCountrySinger(message = "Error here my man")
 public class Singer {
 
 	@NotNull

@@ -67,7 +67,7 @@ public class SingerServiceImpl implements SingerService {
     public void delete(Singer singer) {
         Singer mergedContact = em.merge(singer);
         em.remove(mergedContact);
-
+        //em.remove(singer);
         logger.info("Singer with id: " + singer.getId()  + " deleted successfully");
     }
 

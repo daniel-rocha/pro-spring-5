@@ -17,6 +17,7 @@ public class AsyncTaskDemo {
         AsyncService asyncService = ctx.getBean("asyncService", AsyncService.class);
 
         for (int i = 0; i < 5; i++) {
+            logger.info("Starting task " + i);
             asyncService.asyncTask();
         }
 
